@@ -9,6 +9,7 @@
 
         	<!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
 
         <link rel="stylesheet" href="css/reset.css">
    
@@ -17,15 +18,19 @@
   <link rel="stylesheet" href="css/main.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     </head>
     <body>
+
+
+		
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="container">
     <div class="container whitebox">
     <div class="jumbotron">
       
-					<h1 class="text-center"><strong><i class="fa fa-train"></i> Anytime is Train Time</h1>
+					<h1 class="text-center"><i class="fa fa-train"></i> Anytime is Train Time</h1>
 						<br/><h3 class="text-center">Choo Choo. Chee. Chee.</h3>
 
     </div>
@@ -40,7 +45,7 @@
 
 				<!-- Panel Heading for the retrieved articles box -->
 				<div class="panel-heading">
-					<h3 class="panel-title"><strong><i class="fa fa-train"></i>   Current Train Schedule</h3>
+					<h3 class="panel-title"><i class="fa fa-train"></i>   Current Train Schedule</h3>
 				</div>
 
 				<!-- This main panel will hold each of the resulting articles -->
@@ -58,27 +63,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>@mdo</td>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<td>@mdo</td>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-									<td>@mdo</td>
-								</tr>
-								<tr>
-									<td>@mdo</td>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-									<td>@mdo</td>
-								</tr>
+						
 							</tbody>
 						</table>
 
@@ -97,7 +82,7 @@
 			<!-- First panel is for Adding Train parameters -->
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"><strong><i class="fa fa-train"></i>   Add Train</strong></h3>
+					<h3 class="panel-title"><i class="fa fa-train"></i>   Add Train</h3>
 				</div>
 				<div class="panel-body">
 
@@ -119,14 +104,16 @@
 				  	  <!-- Here we capture the First Train Parameter-->
 					    <div class="form-group">
 								<label for="first_train">First Train Time (HH:mm - Military Time)</label>
-								<input type="text" class="form-control" id="first_train">
+
+								
+								<input type="tel" class="form-control" id="first_train" maxlength="4" placeholder ="__ : __"> 
 							</div>
 	
 
 				  	  <!-- Here we capture the Frequecy Parameter -->
 					  <div class="form-group">
 					    <label for="frequency">Frequency (min)</label>
-					    <input type="text" class="form-control" id="frequency">
+					    <input type="tel" class="form-control" id="frequency" maxlength="2" placeholder="Enter Minutes">
 					  </div>
 
 					  <!-- Here we have our final submit button -->
@@ -138,12 +125,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
 
 
 </div>	<!-- /container -->			
